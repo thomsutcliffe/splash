@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <title>Thom Sutcliffe Rocks!</title>
+</head>
+<body>
+<script>
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    if (params.recipe) {
+        window.location.href = 'https://recipes.sutcliffe.rocks?recipe='+params.recipe
+    }
+</script>
+You are seeing this page as a result of some shortsighted decisions I made at the outset of my Sutcliffe Rocks project.
+I now have a few things deployed under this domain:
+<ul>
+    <li><a href="https://recipes.sutcliffe.rocks">Recipes</a></li>
+    <li><a href="https://namedle.sutcliffe.rocks">Namedle</a></li>
+    <li><a href="https://coffee.sutcliffe.rocks">Coffee</a></li>
+</ul>
+</body>
+
+
